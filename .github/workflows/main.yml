@@ -10,6 +10,7 @@ jobs:
     steps:
       - uses: MeilCli/commenter@master
         with: 
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           trigger_regex: レビュー開始
           assign_reviewers: MeilCli,MeilCli-bot
           assign_labels: documentation
