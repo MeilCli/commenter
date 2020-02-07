@@ -20,6 +20,7 @@ function getOption(): Option {
 
 async function run() {
     try {
+        core.info("start action commenter");
         if (github.context.eventName != "issue_comment") {
             core.info("not issue comment");
             return;
