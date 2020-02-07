@@ -1,0 +1,52 @@
+{
+    "name": "commenter",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/jest": "^25.1.2",
+        "@types/node": "^13.7.0",
+        "@typescript-eslint/eslint-plugin": "^2.19.0",
+        "@typescript-eslint/parser": "^2.19.0",
+        "eslint": "^6.8.0",
+        "eslint-config-prettier": "^6.10.0",
+        "eslint-plugin-prettier": "^3.1.2",
+        "jest": "^25.1.0",
+        "jest-circus": "^25.1.0",
+        "prettier": "^1.19.1",
+        "ts-jest": "^25.2.0",
+        "typescript": "^3.7.5"
+    },
+    "dependencies": {
+        "@actions/core": "^1.2.2",
+        "@actions/github": "^2.1.0"
+    },
+    "prettier": {
+        "printWidth": 120,
+        "tabWidth": 4,
+        "semi": true,
+        "singleQuote": false
+    },
+    "jest": {
+        "clearMocks": true,
+        "moduleFileExtensions": [
+            "js",
+            "ts"
+        ],
+        "testEnvironment": "node",
+        "testMatch": [
+            "**/*.test.ts"
+        ],
+        "testRunner": "jest-circus/runner",
+        "transform": {
+            "^.+\\.ts$": "ts-jest"
+        },
+        "verbose": true
+    }
+}

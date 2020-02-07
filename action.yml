@@ -1,0 +1,17 @@
+name: "commenter"
+description: "auto set labels & reviewers by pull request comment"
+author: "MeilCli"
+branding:
+    icon: arrow-up
+    color: blue
+inputs:
+    trigger_regex:
+        description: "trriger regex"
+        required: true
+    assign_labels:
+        description: 'labels, if set multiple, separated by ","'
+    assign_reviewers:
+        description: "The NuGet sources to use when searching for newer packages"
+runs:
+    using: "node12"
+    main: "lib/main.js"
