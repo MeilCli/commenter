@@ -32,8 +32,8 @@ async function run() {
             return;
         }
         core.info("do");
-        if (payload.issue.body.match(option.triggerRegex) == null) {
-            core.info(`not match \n${payload.issue.body}\n\n${option.triggerRegex}`);
+        if (payload.comment.body.match(option.triggerRegex) == null) {
+            core.info(`not match \n${payload.comment.body}\n\n${option.triggerRegex}`);
             return;
         }
         core.info(`token length: ${process.env.GITHUB_TOKEN?.length}`);
