@@ -1,6 +1,6 @@
 # commenter
 auto set PR reviewers & labels by PR comment
-```
+```yaml
 name: PullReqeust Comment bot
 
 on:
