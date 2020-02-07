@@ -5,6 +5,9 @@ branding:
     icon: arrow-up
     color: blue
 inputs:
+    github_token:
+        description: "github token"
+        required: true
     trigger_regex:
         description: "trriger regex"
         required: true
