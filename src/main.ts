@@ -35,20 +35,24 @@ async function run() {
         }
 
         const rest = new octokit.Octokit({ auth: `token ${option.githubToken}` });
-        if (option.assignReviewers != null) {
+        const assignReviewers = option.assignReviewers?.filter(
+            x => x.toLowerCase() != payload.issue.user.login.toLowerCase()
+        );
+        if (assignReviewers != null && assignReviewers.length != 0) {
             rest.pulls.createReviewRequest({
                 owner: payload.repository.owner.login,
                 repo: payload.repository.name,
                 // eslint-disable-next-line @typescript-eslint/camelcase
                 pull_number: payload.issue.number,
-                reviewers: option.assignReviewers
+                reviewers: assignReviewers
             });
         }
         if (option.assignLabels != null) {
             rest.issues.addLabels({
                 owner: payload.repository.owner.login,
                 repo: payload.repository.name,
-                number: payload.issue.number,
+                // eslint-disable-next-line @typescript-eslint/camelcase
+                issue_number: payload.issue.number,
                 labels: option.assignLabels
             });
         }
