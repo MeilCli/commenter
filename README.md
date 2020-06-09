@@ -31,3 +31,7 @@ jobs:
 
 ## License
 MIT
+
+### Using libraries
+- [actions/toolkit](https://github.com/actions/toolkit), published by [MIT License](https://github.com/actions/toolkit/blob/master/LICENSE.md)
+- [octokit/rest.js](https://github.com/octokit/rest.js), published by [MIT License](https://github.com/octokit/rest.js/blob/master/LICENSE)
